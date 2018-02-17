@@ -30,7 +30,6 @@ import {
   NativeDateModule
 } from '@angular/material';
 import 'hammerjs';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppComponent} from './app.component';
 
 import {AppRouteModule} from './app.route.module';
@@ -58,7 +57,6 @@ import {SignService} from './sign/sign.service';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FlexLayoutModule, // 为子组件引入FlexLayout
     MatCheckboxModule,
     MatSelectModule,
     MatRadioModule,
