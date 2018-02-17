@@ -1,0 +1,23 @@
+<div>
+  <h1>Sign In</h1>
+  <form #signinForm="ngForm">
+    <section>
+      <mat-form-field>
+        <section><input type="email" name="Email" [(ngModel)]="Email" class="example-margin" matInput placeholder="Email" required></section>
+      </mat-form-field>
+      <p>You input: {{Email}}</p>
+    </section>
+    <section>
+      <mat-form-field>
+        <section><input name="PWD" [(ngModel)]="PWD" class="example-margin" matInput type="password" placeholder="Password" required></section>
+      </mat-form-field>
+      <p>You input: {{PWD}}</p>
+    </section>
+
+    <section>
+      <button type="button" class="example-margin" (click)="signUp()" mat-raised-button [disabled]="!signinForm.form.valid">Sign In</button>
+      <button class="example-margin" mat-raised-button type="reset">Reset</button>
+
+    </section>
+  </form>
+</div>

@@ -1,0 +1,49 @@
+<div [hidden]="submitted">
+  <h1>Sign Up</h1>
+  <form #signupForm="ngForm" (ngSubmit)="signUp()">
+    <section>
+      <mat-form-field>
+        <section><input type="email" name="Email" [(ngModel)]="Email" class="example-margin" matInput placeholder="Email" required></section>
+      </mat-form-field>
+      <p>You input: {{Email}}</p>
+    </section>
+    <section>
+      <mat-form-field>
+        <section><input name="PWD" [(ngModel)]="PWD" class="example-margin" matInput type="password" placeholder="Password" required></section>
+      </mat-form-field>
+      <p>You input: {{PWD}}</p>
+    </section>
+
+    <section>
+      <mat-form-field>
+        <mat-select placeholder="Country" required>
+          <mat-option *ngFor="let school of schoolList" [value]="school.schoolid">{{school.abbreviation}} ( {{school.fullname}} )</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+
+    <!--
+    <section>
+      <mat-form-field>
+        <mat-select placeholder="Region" required>
+          <mat-option *ngFor="let school of schoolList" [value]="school.region" (onSelectionChange)="filter">{{school.region}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+    <section>
+      <mat-form-field>
+        <mat-select placeholder="School" required>
+          <mat-option *ngFor="let school of schoolList" [value]="school.schoolid">{{school.abbreviation}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+    -->
+    <section>
+      <button type="button" class="example-margin" (click)="signUp()" mat-raised-button [disabled]="!signupForm.form.valid">Sign Up</button>
+      <button class="example-margin" mat-raised-button type="reset">Reset</button>
+    </section>
+  </form>
+</div>
+<div style="margin-top: 20px;">
+  <button class="example-margin" mat-raised-button="" (click)="submitted = false">Show Form</button>
+</div>
