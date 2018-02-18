@@ -41,6 +41,7 @@ import {SignInComponent} from './sign/sign-in.component';
 import {SignUpComponent} from './sign/sign-up.component';
 import {PageError404Component} from './404';
 import {SignService} from './sign/sign.service';
+import {DataService} from './data/data.service';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,10 @@ import {SignService} from './sign/sign.service';
     NativeDateModule, MatCardModule, MatPseudoCheckboxModule, MatSlideToggleModule,
     MatProgressSpinnerModule, MatIconModule, MatButtonToggleModule, MatListModule
   ],
-  providers: [SignService],
+  providers: [
+    SignService,
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

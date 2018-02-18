@@ -33,18 +33,17 @@
 body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
-  background-color: cornflowerblue;
 }
 
 .basic-container {
   padding: 5px;
   width: 100%;
-  text-align: center;
-  background-color: cornflowerblue;
 }
 
 .material-div{
   width: 100%;
   text-align: center;
 }
+
+
 

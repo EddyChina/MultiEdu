@@ -10,11 +10,12 @@
       <section><button class="example-margin" mat-raised-button>Raise Button</button> </section>
       <section><button class="example-margin" mat-stroked-button>Stroke Button</button> </section>
       <section>
-        <mat-radio-group>
+        <mat-radio-group [(ngModel)]="Major">
           <mat-radio-button class="example-margin" value="CS">Computer Science</mat-radio-button>
           <mat-radio-button class="example-margin" value="Accounting">Accounting</mat-radio-button>
           <mat-radio-button class="example-margin" value="Biology">Biology</mat-radio-button>
         </mat-radio-group>
+        <span>---You select : {{Major}}</span>
       </section>
     </mat-expansion-panel>
 
@@ -56,7 +57,7 @@
       </mat-expansion-panel-header>
       <section>
         <mat-form-field>
-          <mat-select label="Temp" placeholder="Select You School" name="school">
+          <mat-select label="Temp" placeholder="Select You School" [(ngModel)]="selectedV" name="school">
             <mat-option [value]="1">1</mat-option>
             <mat-option value="2">2</mat-option>
             <mat-option value="3">3</mat-option>
@@ -66,6 +67,7 @@
             </mat-optgroup>
           </mat-select>
         </mat-form-field>
+        <p>You have select : {{selectedV}}</p>
       </section>
     </mat-expansion-panel>
 
@@ -85,9 +87,9 @@
         <mat-panel-description>Slide Toggle Demo</mat-panel-description>
       </mat-expansion-panel-header>
       <section>
-        <mat-checkbox class="example-margin">On</mat-checkbox>
-        <mat-checkbox class="example-margin">Off</mat-checkbox>
-        <mat-slide-toggle class="example-margin" aria-label="Slide me!">
+        <mat-checkbox class="example-margin" [(ngModel)]="SlideOn">On</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="SlideOff">Off</mat-checkbox>
+        <mat-slide-toggle class="example-margin" aria-label="Slide me!" [checked]="SlideOn" [disabled]="SlideOff">
           Slide
         </mat-slide-toggle>
       </section>
@@ -104,3 +106,4 @@
       </section>
     </mat-expansion-panel>
   </mat-accordion>
+</div>

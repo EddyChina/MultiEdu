@@ -1,41 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center; width: 100%;">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <h3>{{joke}}</h3>
-
+<div class="headDiv">
+  <nav class="headNav">
+    <button mat-button style="margin-top: 7px;" routerLink="/signin">Sign In</button>
+    <button mat-button style="margin-top: 7px;" routerLink="/signup">Sign Up</button>
+    <button mat-button style="margin-top: 7px;" routerLink="/demos">Demos</button>
+  </nav>
 </div>
 
-<div class="material-div">
-
-  <mat-list>
-    <!--<mat-list-item>
-      <button mat-button="" routerLink="/signin">Sign In</button>
-    </mat-list-item>
-    <mat-list-item>
-      <button mat-button="" routerLink="/signup">Sign Up</button>
-    </mat-list-item>-->
-
-    <!--<mat-list-item>
-      <button mat-button routerLink="/demos">Show 1234</button>
-      <router-outlet></router-outlet>
-    </mat-list-item>-->
-
-  </mat-list>
-
-<mat-tab-group>
-  <mat-tab label="Sign In" routerLink="/signin" #signinTab>
-    <sign-in-component></sign-in-component>
-  </mat-tab>
-
-  <mat-tab label="Sign Up" routerLink="/signup" #signupTab>
-    <sign-up-component></sign-up-component>
-  </mat-tab>
-
-  <mat-tab label="Demo" routerLink="/demos" id="demosTab">
-    <demos-component></demos-component>
-  </mat-tab>
-</mat-tab-group>
+<div style="text-align: center">
+  <router-outlet></router-outlet>
 </div>
-

@@ -1,0 +1,11 @@
+
+.headDiv{
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 50px;
+  text-align: -webkit-right;
+}
+
+.headNav{
+  margin-top: 7px;
+}
