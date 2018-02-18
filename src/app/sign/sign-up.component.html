@@ -3,18 +3,18 @@
   <form #signupForm="ngForm" (ngSubmit)="signUp()">
     <section>
       <mat-form-field>
-        <section><input type="email" name="Email" [(ngModel)]="Email" class="example-margin" matInput placeholder="Email" required></section>
+        <section><input type="email" name="Email" [(ngModel)]="Email" class="example-margin" matInput placeholder="What's your Email?" required></section>
       </mat-form-field>
     </section>
     <section>
       <mat-form-field>
-        <section><input name="PWD" [(ngModel)]="PWD" class="example-margin" matInput type="password" placeholder="Password" required></section>
+        <section><input name="PWD" [(ngModel)]="PWD" class="example-margin" matInput type="password" placeholder="Type a SAFE Password" required></section>
       </mat-form-field>
     </section>
 
     <section>
       <mat-form-field>
-        <mat-select placeholder="Country" required name="country" [(ngModel)]="country" (selectionChange)="filterRegion(country)">
+        <mat-select placeholder="In Which Country is your school?" required name="country" [(ngModel)]="country" (selectionChange)="filterRegion(country)">
           <mat-option *ngFor="let c of countryList" [value]="c.countryId">{{c.countryName}}</mat-option>
         </mat-select>
       </mat-form-field>
@@ -23,7 +23,7 @@
 
     <section>
       <mat-form-field>
-        <mat-select placeholder="Region" required name="region" [(ngModel)]="region" (selectionChange)="filterSchool(country, region)">
+        <mat-select placeholder="In Which Region is your school?" required name="region" [(ngModel)]="region" (selectionChange)="filterSchool(country, region)">
           <mat-option *ngFor="let r of regionFilterList" [value]="r.regionId">{{r.regionName}}</mat-option>
         </mat-select>
       </mat-form-field>
@@ -32,33 +32,21 @@
 
     <section>
       <mat-form-field>
-        <mat-select placeholder="School" required>
+        <mat-select placeholder="What's your school?" required name="school" [(ngModel)]="school">
           <mat-option *ngFor="let sch of schoolFilterList" [value]="sch.schoolid">{{sch.abbreviation}}</mat-option>
         </mat-select>
       </mat-form-field>
     </section>
 
-
-
-    <!--
     <section>
       <mat-form-field>
-        <mat-select placeholder="Region" required>
-          <mat-option *ngFor="let school of schoolList" [value]="school.region" (onSelectionChange)="filter">{{school.region}}</mat-option>
-        </mat-select>
+        <section><input name="studentNo" [(ngModel)]="studentNo" class="example-margin" matInput placeholder="What's your student number?" required></section>
       </mat-form-field>
     </section>
-    <section>
-      <mat-form-field>
-        <mat-select placeholder="School" required>
-          <mat-option *ngFor="let school of schoolList" [value]="school.schoolid">{{school.abbreviation}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </section>
-    -->
+
     <section>
       <button type="button" class="example-margin" (click)="signUp()" mat-raised-button [disabled]="!signupForm.form.valid">Sign Up</button>
-      <button class="example-margin" mat-raised-button type="reset">Reset</button>
+      <button style="padding: 0 0 0 10px" class="example-margin" mat-raised-button type="reset">Reset</button>
     </section>
   </form>
 </div>

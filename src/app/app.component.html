@@ -1,12 +1,40 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="headDiv">
-  <nav class="headNav">
-    <button mat-button style="margin-top: 7px;" routerLink="/signin">Sign In</button>
-    <button mat-button style="margin-top: 7px;" routerLink="/signup">Sign Up</button>
-    <button mat-button style="margin-top: 7px;" routerLink="/demos">Demos</button>
-  </nav>
+
+<div [hidden]="loaded">
+  <mat-spinner></mat-spinner>
 </div>
 
-<div style="text-align: center">
-  <router-outlet></router-outlet>
+
+<div [hidden]="!loaded">
+
+
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span routerLink="/">
+        {{title}}
+      </span>
+      <span class="example-spacer"></span>
+
+      <button mat-button routerLink="/signin">Sign In</button>
+      <button mat-button routerLink="/demos">Demos</button>
+
+      <button mat-button [matMenuTriggerFor]="signupMenu">Sign Up</button>
+      <mat-menu #signupMenu="matMenu">
+        <a mat-menu-item routerLink="/signup">As a student</a>
+        <a mat-menu-item routerLink="/signup">As a teacher</a>
+        <a mat-menu-item routerLink="/signup">As a organization</a>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-card style="text-align: center">
+    <router-outlet>
+    </router-outlet>
+  </mat-card>
+
+
+
 </div>
+
+

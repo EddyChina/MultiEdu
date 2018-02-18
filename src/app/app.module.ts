@@ -3,33 +3,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatLineModule,
-  MatListModule,
-  MatOptionModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatPseudoCheckboxModule,
-  MatRadioModule,
-  MatSelectModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  NativeDateModule
-} from '@angular/material';
-import 'hammerjs';
 import {AppComponent} from './app.component';
 
 import {AppRouteModule} from './app.route.module';
@@ -42,6 +15,7 @@ import {SignUpComponent} from './sign/sign-up.component';
 import {PageError404Component} from './404';
 import {SignService} from './sign/sign.service';
 import {DataService} from './data/data.service';
+import {MaterialsModule} from './materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -58,17 +32,7 @@ import {DataService} from './data/data.service';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCheckboxModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatInputModule, // 为子组件引入Material
-    MatButtonModule,
-    MatTableModule, MatSliderModule, MatDialogModule,
-    MatGridListModule, MatProgressBarModule, MatOptionModule,
-    MatAutocompleteModule,
-    MatExpansionModule, MatStepperModule, MatTabsModule, MatLineModule,
-    NativeDateModule, MatCardModule, MatPseudoCheckboxModule, MatSlideToggleModule,
-    MatProgressSpinnerModule, MatIconModule, MatButtonToggleModule, MatListModule
+    MaterialsModule,
   ],
   providers: [
     SignService,

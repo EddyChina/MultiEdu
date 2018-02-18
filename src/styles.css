@@ -33,17 +33,11 @@
 body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
+  background-color: yellowgreen;
 }
 
-.basic-container {
-  padding: 5px;
-  width: 100%;
+button{
+  padding: 0 14px;
 }
-
-.material-div{
-  width: 100%;
-  text-align: center;
-}
-
 
 
