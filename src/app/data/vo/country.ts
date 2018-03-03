@@ -1,15 +1,15 @@
 export class Country {
-  _countryId: number;
+  _countryId: string;
   _countryName: string;
   _abbreviation: string;
   _continent: string;
 
 
-  get countryId(): number {
+  get countryId(): string {
     return this._countryId;
   }
 
-  set countryId(value: number) {
+  set countryId(value: string) {
     this._countryId = value;
   }
 

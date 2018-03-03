@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 
-import {AppRouteModule} from './app.route.module';
+import {AppRoutingModule} from './app.routing.module';
 /***
  * the followings are self-declarated components
  */
@@ -26,7 +26,7 @@ import {MaterialsModule} from './materials/materials.module';
     PageError404Component,
   ],
   imports: [
-    AppRouteModule,
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,

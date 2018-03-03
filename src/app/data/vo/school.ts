@@ -1,17 +1,17 @@
 export class School {
-  _schoolid: number;
+  _schoolid: string;
   _fullname: string;
   _abbreviation: string;
   _alias: string;
-  _countryid: number;
+  _countryid: string;
   _region: String;
 
 
-  get schoolid(): number {
+  get schoolid(): string {
     return this._schoolid;
   }
 
-  set schoolid(value: number) {
+  set schoolid(value: string) {
     this._schoolid = value;
   }
 
@@ -39,11 +39,11 @@ export class School {
     this._alias = value;
   }
 
-  get countryid(): number {
+  get countryid(): string {
     return this._countryid;
   }
 
-  set countryid(value: number) {
+  set countryid(value: string) {
     this._countryid = value;
   }
 

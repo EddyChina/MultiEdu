@@ -38,6 +38,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRouteModule {
+export class AppRoutingModule {
 
 }

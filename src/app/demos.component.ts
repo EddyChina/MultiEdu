@@ -7,6 +7,11 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class DemosComponent implements OnInit {
+  Major = '';
+  selectedV = '';
+  SlideOff = true;
+  SlideOn = true;
+
   ngOnInit(): void {
   }
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="sign.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sign/sign-in.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      <target>邮箱</target>
+      </trans-unit>
+      <trans-unit id="sign.password" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sign/sign-in.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <target>密码</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

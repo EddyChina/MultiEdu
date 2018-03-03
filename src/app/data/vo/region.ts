@@ -2,7 +2,7 @@ export class Region {
 
   _regionId: string;
   _regionName: string;
-  _countryId: number;
+  _countryId: string;
 
 
   get regionId(): string {
@@ -21,11 +21,11 @@ export class Region {
     this._regionName = value;
   }
 
-  get countryId(): number {
+  get countryId(): string {
     return this._countryId;
   }
 
-  set countryId(value: number) {
+  set countryId(value: string) {
     this._countryId = value;
   }
 }

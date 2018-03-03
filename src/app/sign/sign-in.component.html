@@ -3,19 +3,20 @@
   <form #signinForm="ngForm">
     <section>
       <mat-form-field>
-        <section><input type="email" name="Email" [(ngModel)]="Email" class="example-margin" matInput placeholder="Email" required></section>
+        <section><input name="email" type="email" [(ngModel)]="email" class="example-margin" matInput i18n-placeholder="@@sign.email" placeholder="Email" required></section>
       </mat-form-field>
     </section>
     <section>
       <mat-form-field>
-        <section><input name="PWD" [(ngModel)]="PWD" class="example-margin" matInput type="password" placeholder="Password" required></section>
+        <section><input name="password" [(ngModel)]="password" class="example-margin" matInput type="password" i18n-placeholder="@@sign.password" placeholder="Password" required></section>
       </mat-form-field>
     </section>
 
     <section>
-      <button type="button" class="example-margin" (click)="signUp()" mat-raised-button [disabled]="!signinForm.form.valid">Sign In</button>
+      <button type="button" class="example-margin" mat-raised-button [disabled]="!signinForm.form.valid" i18n="@@signin.btn">Sign In</button>
       <button class="example-margin" mat-raised-button type="reset">Reset</button>
 
     </section>
   </form>
 </div>
+

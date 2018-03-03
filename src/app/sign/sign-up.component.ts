@@ -14,6 +14,13 @@ import {forEach} from '@angular/router/src/utils/collection';
 
 export class SignUpComponent implements OnInit {
 
+  password = '';
+  email = '';
+  countryId = '';
+  regionId = '';
+  schoolId = '';
+  studentNo = '';
+
   countryList: Country[];
   regionList: Region[];
   schoolList: School[];
@@ -52,7 +59,7 @@ export class SignUpComponent implements OnInit {
     }
   }
 
-  filterRegion(countryId: number): void {
+  filterRegion(countryId: string): void {
     console.log('filterRegion().countryId = ' + countryId);
 
     this.schoolFilterList = [];
@@ -65,7 +72,7 @@ export class SignUpComponent implements OnInit {
     }
   }
 
-  filterSchool(countryId: number, regionId: string): void {
+  filterSchool(countryId: string, regionId: string): void {
     console.log('filterRegion().countryId = ' + countryId + ', regionId = ' + regionId);
     for (let i = 0; i < this.schoolList.length; i++) {
       if (this.schoolList[i].countryid === countryId
